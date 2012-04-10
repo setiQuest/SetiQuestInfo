@@ -1,0 +1,2 @@
+java -classpath ${CLASSPATH}:${LIB_DIR} setiquest.common.Parameters
+

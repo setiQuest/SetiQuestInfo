@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/Users/jrichards/seti/GSoC/telescopeSimProject2/Telescope-Simulator/jars/jackson-core-lgpl-1.8.1.jar"/>
+	<classpathentry kind="lib" path="/Users/jrichards/Downloads/bson4jackson-1.1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/jrichards/seti/GSoC/sim/Telescope-Simulator/Telescope-Simulator/jars/jackson-all-1.8.1.jar"/>
+	<classpathentry kind="lib" path="jars/jackson-all-1.8.1.jar"/>
+	<classpathentry kind="lib" path="jars/jtransforms-2.3.jar"/>
+	<classpathentry kind="lib" path="jars/junit-4.9b2.jar"/>
+	<classpathentry kind="lib" path="jars/plot.jar"/>
+	<classpathentry kind="lib" path="jars/httpclient-4.1.2.jar"/>
+	<classpathentry kind="lib" path="jars/httpmime-4.1.2.jar"/>
+	<classpathentry kind="lib" path="jars/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="lib" path="jars/httpcore-4.1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

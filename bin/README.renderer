@@ -1,0 +1,13 @@
+To run the Renderer you must first start up the filereceiver program in
+the background. Then rnu the renderer script to start up the renderer.
+
+filereceiver defaults to receiving data on TCP port 11982 and will
+place the data files into /home/setiquest/data. You may edit the
+"filereceiver" script to change these defaults.
+
+The renderer script will attempt to use the ./properties/renderer.properties
+script by default. You may point the renderer to another properties
+file by supplying the full path name to another, such as
+"renderer ~/my_properties/renderer.properties". The default
+properties file that is stored in the repository does not contain the
+proper info, you need to edit it.

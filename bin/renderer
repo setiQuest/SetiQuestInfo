@@ -1,0 +1,3 @@
+#!/bin/bash
+java -classpath ${CLASSPATH}:${LIB_DIR} setiquest.renderer.Renderer $1 &
+

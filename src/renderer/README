@@ -1,0 +1,41 @@
+Jon Richards
+The SETI Institute
+April 09, 2012
+
+Source code for the Renderer program used for SETILive!
+
+*** What is The Renderer? ***
+
+You can visit http://setilive.org and view waterfall plot representaions
+of the complex amplitude data gathered in real time at the Allen
+Telescope Array. The data path is generally the following:
+
+1. The Allen Telescope (ATA) Array observes 3 targets in the sky at a time.
+2. As it is observing, the data from the ATA is sent to the cloud.
+3. TheRenderer program is forever waiting in the cloud for these data files to 
+   arrive.
+4. The Renderer processes the data, packages it into BSON format data
+   files and sends the data to the SETILive servers for their processing.
+
+*** How to build. ***
+
+Your environemnt must be set up properly. See the README.txt file in the
+"proj" directory for details. After your environment is set up properly,
+do a "make".
+
+*** How to run. ***
+
+There really is not much hope of really running the Renderer unless you have 
+the real time data feed from the ATA. But to run, you need to edit the
+proj/properties/renderer.properties file with correct values, then
+run the "renderer" script in the "bin" directory. Let it run in the background.
+
+** Where it gets the data. ***
+
+The data comes from the ATA, streamed to the server. The data in intercepted
+by the filereceiver program, located in the "bin" directory, which gathers the 
+data into files that the renderer picks up and processes. Let the 
+filereceiver program run in the background.
+
+
+
