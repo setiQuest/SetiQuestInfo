@@ -1,0 +1,21 @@
+#!/bin/bash -l
+
+########################################################
+#
+# Starts the renderer if it is not already active.
+#
+# This script is meant to run as a cron job,
+# maybe every minute.
+#
+# Author: Jon Richards
+# Date April 13, 2012
+#
+########################################################
+
+TEST=`ps ax | grep setiquest.renderer.Renderer | grep -v grep | wc -l`
+
+if [ $TEST -eq 0 ]
+then
+    java -classpath ${CLASSPATH}:${LIB_DIR} setiquest.renderer.Renderer $1 &
+fi
+
