@@ -330,13 +330,15 @@ public class Ingest
     public void convertFFTValuesToPixels(double coef[], int[] pixbuff, double oversamplingPct)
     {
 
-        int maxPixelValue = 255;
-        double maxPairValue = 7;
-        double maxPowerValue =  maxPairValue * maxPairValue +
-            maxPairValue * maxPairValue;
-        double scaleFactor = 4;
+	int maxPixelValue = 255;
 
-        double scale = (double) maxPixelValue / maxPowerValue * scaleFactor;
+        /* Scale is fixed. Beamformer maintains average level nominally at 1 in 
+         * compamp data. Previous scale calculation worked out to fixed value
+         * of 10.408. This should be chosen to provide the desired linear range
+         * in terms of average noise power and the resolution of the display. 
+         */
+
+        double scale = 20;
 
         // zero output buffer in case it's only partially filled
         for (int i=0; i<pixbuff.length; ++i)
@@ -364,10 +366,9 @@ public class Ingest
             double realValue = coef[ofs+i];
             double imagValue = coef[ofs+i+1];
 
-            int power = (int) (realValue * realValue +
-                    imagValue * imagValue);
-
-            int pixel = (int) (power * scale);
+            double power = (realValue * realValue +
+                    imagValue * imagValue); // keep power a double
+            int pixel = (int) (power * scale + 0.5); //0.5 makes cast a round.
             if (pixel > maxPixelValue)
                 pixel = maxPixelValue;
 
@@ -406,26 +407,16 @@ public class Ingest
             coef[i] = temp;
         }
 
-
-        // Normalize by the mean square value
-        double sumSquare = 0;
-        for (int i=0; i<coef.length; i+=2)
-        {
-            sumSquare += Math.abs(coef[i]) * Math.abs(coef[i]) +
-                Math.abs(coef[i+1]) * Math.abs(coef[i+1]);
-        }
-        double meanSquare = sumSquare / transformLength;
-        double norm = Math.sqrt(meanSquare);
+        
+        // Normalize by the nominal mean square value of noise.
+        //    Time data is already normalized, so just scale the fft data.
+        double norm = Math.sqrt(transformLength);
 
         for (int i=0; i<coef.length; ++i)
         {
             coef[i] /= norm;
 
-            // trim to min/max values
-            int maxValue = 7;
-            int minValue = -maxValue;
-            if (coef[i] > maxValue) coef[i] = maxValue;
-            if (coef[i] < minValue) coef[i] = minValue;
+            //Trimming/clipping is not necessary. Let the imaging process do it.
         }
 
     }
