@@ -1,0 +1,22 @@
+#!/bin/bash -l
+
+########################################################
+#
+# Starts the File Receiver if it is not already active.
+#
+# This script is meant to run as a cron job,
+# maybe every minute.
+#
+# Author: Jon Richards
+# Date April 13, 2012
+#
+########################################################
+
+TEST=`ps ax | grep opensonata.dataDisplays.FileReceiver | grep -v grep | wc -l`
+
+if [ $TEST -eq 0 ]
+then
+    java -classpath ${CLASSPATH}:${LIB_DIR} opensonata.dataDisplays.FileReceiver --port 11982 --dir /home/setiquest/data &
+
+fi
+
