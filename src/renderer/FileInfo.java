@@ -267,7 +267,7 @@ public class FileInfo
      */
     public void backup(String dir)
     {
-        File d = new File("/" + date);
+        File d = new File(dir + "/" + date);
         d.mkdir();
 
         File f = new File(this.filename);

@@ -54,7 +54,7 @@ import edu.emory.mathcs.jtransforms.fft.DoubleFFT_1D;
  * @author Jon Richards - The SETI Institute - Dec 06, 2011
  *
  */
-public class Ingest
+public final class Ingest
 {
     private String filename = "";
     private byte[] pixelData = null;
@@ -330,13 +330,15 @@ public class Ingest
     public void convertFFTValuesToPixels(double coef[], int[] pixbuff, double oversamplingPct)
     {
 
-        int maxPixelValue = 255;
-        double maxPairValue = 7;
-        double maxPowerValue =  maxPairValue * maxPairValue +
-            maxPairValue * maxPairValue;
-        double scaleFactor = 4;
+	int maxPixelValue = 255;
 
-        double scale = (double) maxPixelValue / maxPowerValue * scaleFactor;
+        /* Scale is fixed. Beamformer maintains average level nominally at 1 in 
+         * compamp data. Previous scale calculation worked out to fixed value
+         * of 10.408. This should be chosen to provide the desired linear range
+         * in terms of average noise power and the resolution of the display. 
+         */
+
+        double scale = 15;
 
         // zero output buffer in case it's only partially filled
         for (int i=0; i<pixbuff.length; ++i)
@@ -364,10 +366,9 @@ public class Ingest
             double realValue = coef[ofs+i];
             double imagValue = coef[ofs+i+1];
 
-            int power = (int) (realValue * realValue +
-                    imagValue * imagValue);
-
-            int pixel = (int) (power * scale);
+            double power = (realValue * realValue +
+                    imagValue * imagValue); // keep power a double
+            int pixel = (int) (power * scale + 0.5); //0.5 makes cast a round.
             if (pixel > maxPixelValue)
                 pixel = maxPixelValue;
 
@@ -406,26 +407,40 @@ public class Ingest
             coef[i] = temp;
         }
 
-
-        // Normalize by the mean square value
-        double sumSquare = 0;
-        for (int i=0; i<coef.length; i+=2)
-        {
-            sumSquare += Math.abs(coef[i]) * Math.abs(coef[i]) +
-                Math.abs(coef[i+1]) * Math.abs(coef[i+1]);
-        }
-        double meanSquare = sumSquare / transformLength;
-        double norm = Math.sqrt(meanSquare);
-
+        
+        // Normalize by the nominal mean square value of noise.
+        //    Time data is already normalized, so just scale the fft data.
+        // Try to correct for the noise floor suppression caused by upstream
+        //    quantization clipping and AGC due to strong RFI.
+        // Clip and then normalize by the mean square value of unclipped values.
+        // FFT I and Q noise samples should be Gaussian with variance 0.5
+        double norm; //nominal normalization
+        double clipsq = 4.0 * transformLength; //4 x variance
+        double sumnoclip = 0;
+        double numnoclip = 0;
+        // get sum of squared un-clipped valued
         for (int i=0; i<coef.length; ++i)
         {
-            coef[i] /= norm;
+            double temp = coef[i] * coef[i];
+            if ( temp < clipsq ) {
+                sumnoclip += temp;
+                numnoclip += 1.0;
+            }
+        }
+        // If 25% samples unclipped, use calculated value otherwise use nominal.
+        // Multiplier inside sqrt was determined empirically to get scaling
+        // normalized to get FFT mean power = 1 for noise.
+        if ( numnoclip > (double) coef.length * 0.75 ) {
+            norm = java.lang.Math.sqrt( 2.3 * sumnoclip / numnoclip );
+        } else {
+            norm = java.lang.Math.sqrt( transformLength );
+        }
+        
+        for (int i=0; i<coef.length; ++i)
+        {
+            coef[i] /= norm;            
 
-            // trim to min/max values
-            int maxValue = 7;
-            int minValue = -maxValue;
-            if (coef[i] > maxValue) coef[i] = maxValue;
-            if (coef[i] < minValue) coef[i] = minValue;
+            //Trimming/clipping is not necessary. Let the imaging process do it.
         }
 
     }

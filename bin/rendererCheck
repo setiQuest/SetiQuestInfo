@@ -12,10 +12,13 @@
 #
 ########################################################
 
-TEST=`ps ax | grep setiquest.renderer.Renderer | grep -v grep | wc -l`
+#The "-renderer-in-use" is only used to identify this process as the
+#renderer on this server that is actually being used. If "-renderer-in-use"
+#is not used - this signifies it is only used for testing, not live.
+TEST=`ps ax | grep renderer-in-use | grep -v grep | wc -l`
 
 if [ $TEST -eq 0 ]
 then
-    java -classpath ${CLASSPATH}:${LIB_DIR} setiquest.renderer.Renderer $1 &
+    java -classpath ${CLASSPATH}:${LIB_DIR} setiquest.renderer.Renderer $1 -renderer-in-use &
 fi
 

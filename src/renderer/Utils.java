@@ -147,6 +147,15 @@ public class Utils
     }
 
     /**
+     * Get the renderer version
+     * @return the renderer version
+     */
+    public static String getRendererVersion()
+    {
+        return params.getParam("rendererversion");
+    }
+
+    /**
      * Create a String of all the properties.
      * @return a string of all the properties.
      */
@@ -157,7 +166,8 @@ public class Utils
             "logdir=" + getLogDir() + "\n" + 
             "statusurl=" + getStatusURL() + "\n" + 
             "offlineSubjectsurl=" + getOfflineSubjectsURL() + "\n" +
-            "subjectsurl=" + getSubjectsURL();
+            "subjectsurl=" + getSubjectsURL() + "\n" +
+            "rendering=" + getRendererVersion();
     }
 
 
@@ -446,7 +456,7 @@ public class Utils
      * @param pol the POL of thedata.
      * @param subchannel the subchannel of the data.
      */
-    public static void sendBSONFile(String filename, int actId, int obsId, int pol, String subchannel)
+    public static String sendBSONFile(String filename, int actId, int obsId, int pol, String subchannel)
     {
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost(Utils.getSubjectsURL());
@@ -472,6 +482,7 @@ public class Utils
             HttpEntity resEntity = response.getEntity();
 
             Log.log(response.toString());
+            return response.toString();
 
             /*
                sendResult  = "subject[activity_id]: " + actId + "\n";
@@ -488,6 +499,7 @@ public class Utils
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return "ERROR";
     }
 
 

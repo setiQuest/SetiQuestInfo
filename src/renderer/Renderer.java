@@ -125,14 +125,13 @@ public class Renderer
          */
         public String toString()
         {
-            String result = "*** GROUP Count = " + files.size() + ", Processed = " + isProcessed() + "***\n";
+            String result = "GROUP Count = " + files.size() + ", Processed = " + isProcessed() + "\n";
+            result += sendResult + "\n\n";
             for(int i = 0; i<files.size(); i++)
             {
                 FileInfo fi = (FileInfo)files.get(i);
                 result += fi.toString() + "\n";
             }
-            result += sendResult;
-            result += "*********************\n";;
             return result;
         }
 
@@ -164,6 +163,7 @@ public class Renderer
             String date = "";
             String time = "";
             String subchannel = "";
+            int sigId = 0;
 
             Log.log("Packaging " + files.size() + " files.");
             for(int i = 0; i<files.size(); i++)
@@ -183,16 +183,19 @@ public class Renderer
                 {
                     targetBeam1 = fi.getTargetId();
                     pixels1 = fi.getData();
+                    if(sigId == 0) sigId = Integer.parseInt(fi.sigId);
                 }
                 else if(fi.getBeam() == 2)
                 {
                     targetBeam2 = fi.getTargetId();
                     pixels2 = fi.getData();
+                    if(sigId == 0) sigId = Integer.parseInt(fi.sigId);
                 }
                 else if(fi.getBeam() == 3)
                 {
                     targetBeam3 = fi.getTargetId();
                     pixels3 = fi.getData();
+                    if(sigId == 0) sigId = Integer.parseInt(fi.sigId);
                 }
             }
 
@@ -219,7 +222,8 @@ public class Renderer
                     (float)533.333,
                     date, time, 
                     targetBeam1, targetBeam2, targetBeam3,
-                    beams);
+                    beams,
+                    sigId);
 
             ObjectMapper mapper = new ObjectMapper(new BsonFactory());
 
@@ -233,7 +237,9 @@ public class Renderer
                 String bsonFilename = getDir() + "/bson/act" + firstData.activityId + "." + firstData.polarization + "." + obsType + "." + subchannel + ".bson";
                 mapper.writeValue(new File(bsonFilename), sdr);
                 //jmapper.writeValue(new File(jsonFilename), sdr);
-                Utils.sendBSONFile(bsonFilename, activity, obsType, firstData.polarization, subchannel);
+                String result = Utils.sendBSONFile(bsonFilename, activity, obsType, firstData.polarization, subchannel);
+                if(result.contains("201 Created")) sendResult = "SENT.";
+
             } catch (JsonGenerationException e) {
                 e.printStackTrace();
                 return;
@@ -358,7 +364,7 @@ public class Renderer
 
         //if(bfSigStats[bfNum-1].getDx() < 1) 
         //	return bfSigStats[bfNum-1].getCompampFilename();
-        Log.log("Combing for files in: " + getDir());
+        //Log.log("Combing for files in: " + getDir());
 
         long lastModified = 0;
         String latestFilename = null;
@@ -379,7 +385,15 @@ public class Renderer
                     if(fileList.get(children[i]) == null)
                     {
                         File f = new File(getDir() + "/" + children[i]);
-                        if(f.length() == 71208)
+                        // if file is >= 5 minutes old - delete it.
+                        if((System.currentTimeMillis() - f.lastModified()) >= (10*60*1000))
+                        {
+                            Log.log("Deleting old file: " + children[i] + " Times: " + 
+                                    System.currentTimeMillis() + ", " + 
+                                    f.lastModified());
+                            f.delete();
+                        }
+                        else if(f.length() == 71208)
                         {
                             FileInfo fi = new FileInfo(getDir() + "/" + children[i]);
                             fileList.put(children[i], fi);
@@ -424,7 +438,7 @@ public class Renderer
                 if(firstFile == true)
                 {
                     firstFile = false;
-                    postFakeFollowup(fi);
+                    //postFakeFollowup(fi);
                 }
             }
         }
@@ -447,6 +461,8 @@ public class Renderer
         String ffreq = "" + fi.getFirstData().rfCenterFrequency;
         String beamNo = "" + fi.getBeam();
 
+        if(ppol.equals("R")) ppol ="right";
+        else ppol = "left";
         //Since we are faking it here - if a signal has sigId == 0, create a followupid == random
         //number between 1 and 100000.
         Random rand = new Random(System.currentTimeMillis()); //seed with current time.
@@ -585,15 +601,18 @@ public class Renderer
      */
     public String groupsToString()
     {
+        if(groupList.size() == 0) return null;
+
         String result = "GROUP LIST:\n";
         result += "Num of groups: " + groupList.size() + "\n";
         result += "Num of files:  " + fileList.size() + "\n";
 
         for(int i = 0; i<groupList.size(); i++)
         {
-            result += "GROUP NUMBER = " + (i+1) + "\n";
+            result += "************\nGROUP NUMBER = " + (i+1) + "\n";
             Group gr = (Group)groupList.get(i);
             result += gr.toString();
+            result += "\n************\n";
         }
         return result;
     }
@@ -633,7 +652,10 @@ public class Renderer
                 {
                     fm.combForFiles(".R.");
                     fm.combForFiles(".L.");
-                    Log.log("INFO: " + fm.groupsToString());
+
+                    String info = fm.groupsToString();
+                    if(info != null)
+                      Log.log("INFO: " + info);
 
                     //Every hour purge old bson files.
                     long thisPurgeSecs = System.currentTimeMillis()/1000;
@@ -644,8 +666,8 @@ public class Renderer
                         lastPurgeSecs = thisPurgeSecs;
                     }
 
-                    //Sleep for 10 seconds.
-                    delay(10000);
+                    //Sleep for 2 seconds.
+                    delay(2000);
 
                 }
 

@@ -1,1 +1,1 @@
-java -classpath ${CLASSPATH}:${LIB_DIR} opensonata.dataDisplays.FileReceiver --port 11982 --dir /home/setiquest/data 
+java -classpath ${CLASSPATH}:${LIB_DIR} opensonata.dataDisplays.FileReceiver --port 11982 --dir /home/setiquest/data

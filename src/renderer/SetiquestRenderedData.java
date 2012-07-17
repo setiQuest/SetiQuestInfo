@@ -41,6 +41,8 @@
 package setiquest.renderer;
 
 import java.io.Serializable;
+import java.io.FileReader;
+import java.io.BufferedReader;
 import java.text.*;
 import java.util.*;
 
@@ -60,6 +62,8 @@ public class SetiquestRenderedData  implements Serializable
     private long _startTimeNanos;
     private long _endTimeNanos;
     private Beam[] _beam;
+    private int _followupId;
+    private String _rendering = "";
 
     /**
      * Constructor.
@@ -89,7 +93,7 @@ public class SetiquestRenderedData  implements Serializable
             int width, int height, double centerFreqMhz, float bandwidthMhz,
             String date, String time,
             int beam1TargetId, int beam2TargetId, int beam3TargetId,
-            Beam[] beam)
+            Beam[] beam, int followupId)
     {
         _activityId = activityId;
         _pol = pol;
@@ -99,6 +103,8 @@ public class SetiquestRenderedData  implements Serializable
         _centerFreqMhz = centerFreqMhz;
         _bandwidthMhz = bandwidthMhz;
         _beam = beam;
+        _followupId = followupId;
+        _rendering = Utils.getRendererVersion();
 
         //Convert the date and time
         //Date:        2012-01-13
@@ -110,8 +116,20 @@ public class SetiquestRenderedData  implements Serializable
             // explicitly set timezone of input if needed
             df.setTimeZone(java.util.TimeZone.getTimeZone("Zulu"));
             java.util.Date d = df.parse(date + "T" + time + "Z");
-            _startTimeNanos = (new Long(d.getTime()) - 46500) *1000000 ;
-            _endTimeNanos = _startTimeNanos + 93*1000000000;
+
+            //JR - June 21, 2012 - Found out the time for the data if about 2.5 minutes
+            //behind what it should be. That is because the time of the file name if the start of the
+            //activity - not the start of collection. So i am adjusting roughly here.
+            //_startTimeNanos = (new Long(d.getTime()) - 46500) *1000000 ;
+            //_endTimeNanos = _startTimeNanos + 93*1000000000;
+            _startTimeNanos = getDataCollectionStartTime(activityId);
+            Log.log("Start time nanos read from activity data collection start time file: " + _startTimeNanos);
+            if(_startTimeNanos <= 0)
+            {
+                Log.log("Calculating _startTimeNanos, value in file was bad.");
+                _startTimeNanos = (new Long(d.getTime()) + 150000) *1000000 ;
+            }
+            _endTimeNanos = _startTimeNanos + 94*1000000000; //An obs is 94 seconds
         }
         catch (Exception ex)
         {
@@ -241,6 +259,31 @@ public class SetiquestRenderedData  implements Serializable
     public void setBeam(Beam[] beam) { _beam = beam; }
 
     /**
+     * Get the followup Id.
+     * @return the followup Id.
+     */
+    public int getFollowupId() { return _followupId; }
+
+    /**
+     * Set the followup Id.
+     * @param followupId the followup Id.
+     */
+    public void setFollowupId(int followupId) { _followupId = followupId; }
+
+    /**
+     * Get the rendering version.
+     * @return the rendering version. This is rendererversion in teh properties file.
+     */
+    public String getRendering() { return _rendering; }
+
+    /**
+     * Set the rendering version.
+     * @param rendering the rendering version. 
+     */
+    public void setRendering(String rendering) { _rendering = rendering; }
+
+
+    /**
      * Class to contain the data for 1 beam.
      */
     public class Beam
@@ -299,12 +342,45 @@ public class SetiquestRenderedData  implements Serializable
         public void setData(byte[] data) { _data = data; }
     }
 
+    public static long getDataCollectionStartTime(int activityId)
+    {
+
+        String dateTimeString = "";
+        try
+        {
+            //Try to open the file and read the date time string
+            FileReader fr = new FileReader(Utils.getDataDir() + "/setiquest-activity-time-" + activityId + ".txt");
+
+            Log.log("Reading: " + Utils.getDataDir() + "/setiquest-activity-time-" + activityId + ".txt");
+            BufferedReader br = new BufferedReader(fr); 
+            dateTimeString = br.readLine();
+            dateTimeString = dateTimeString.replace(" ", "T") + "Z";
+            Log.log("Start time for activity " + activityId + " data collection is: " + dateTimeString);
+            fr.close(); 
+
+            if(dateTimeString.length() <= 0) return -1;
+
+            java.text.DateFormat df = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+            df.setTimeZone(java.util.TimeZone.getTimeZone("Zulu"));
+            java.util.Date d = df.parse(dateTimeString);
+
+            return (new Long(d.getTime())) *1000000 ;
+        }
+        catch (Exception ex)
+        {
+            Log.log(ex.getMessage() + " : " + dateTimeString);
+            return -1;
+        }
+
+    }
+
     /**
      * Main entry point, for testing.
      * @param args string array of arguments.
      */
     public static void main(String[] args) 
     {
+        System.out.println(SetiquestRenderedData.getDataCollectionStartTime(7241));
     }
 
 }
