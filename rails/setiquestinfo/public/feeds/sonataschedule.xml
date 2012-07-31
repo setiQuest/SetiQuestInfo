@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<schedule>
+  <datetime>Thu, 12 Apr 2012 13:04:03 GMT</datetime>
+  <status>OBSERVING</status>
+  <obs current="yes">
+     <command>kepler</command>
+     <start>
+      <year>2012</year>
+      <month>04</month>
+      <day>12</day>
+      <hour>06</hour>
+      <minute>35</minute>
+     </start>
+     <end>
+      <year>2012</year>
+      <month>04</month>
+      <day>12</day>
+      <hour>20</hour>
+      <minute>55</minute>
+     </end>
+  </obs>
+  <obs current="no">
+    <command>exoplanets</command>
+    <start>
+      <year>2012</year>
+      <month>04</month>
+      <day>13</day>
+      <hour>03</hour>
+      <minute>05</minute>
+    </start>
+    <end>
+      <year>2012</year>
+      <month>04</month>
+      <day>13</day>
+      <hour>06</hour>
+      <minute>00</minute>
+    </end>
+  </obs>
+  <obs current="no">
+    <command>kepler</command>
+    <start>
+      <year>2012</year>
+      <month>04</month>
+      <day>13</day>
+      <hour>06</hour>
+      <minute>00</minute>
+    </start>
+    <end>
+      <year>2012</year>
+      <month>04</month>
+      <day>13</day>
+      <hour>15</hour>
+      <minute>55</minute>
+    </end>
+  </obs>
+</schedule>

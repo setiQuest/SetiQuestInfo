@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SetiQuest Info Service</title>
+  <%= stylesheet_link_tag "style" %>
+  <%= stylesheet_link_tag "obsinfo" %>
+  <%= stylesheet_link_tag "cam" %>
+  <%= javascript_include_tag "page_loader" %>
+  <%= javascript_include_tag "stopwatch" %>
+  <%= csrf_meta_tag %>
+</head>
+<!body onload="javascript:getpage('obsinfo.html', 'content_area');">
+<body>
+<%= yield %>
+
+
+</body>
+</html>

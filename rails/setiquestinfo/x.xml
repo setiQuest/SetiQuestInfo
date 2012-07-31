@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<info>
+	<obs>
+		<datetime>Wed, 30 Nov 2011 22:42:20 +0000</datetime>
+		<activityid>72</activityid>
+		<state>Idle</state>
+		<primarybeamra>19.11039924621582</primarybeamra>
+		<primarybeamdec>46.78350067138672</primarybeamdec>
+	</obs>
+	<beam beamnumber="1" >
+		<datetime>Wed, 30 Nov 2011 22:42:20 +0000</datetime>
+		<state>inactive</state>
+	</beam>
+	<beam beamnumber="2" >
+		<datetime>Wed, 30 Nov 2011 22:42:20 +0000</datetime>
+		<state>inactive</state>
+	</beam>
+	<beam beamnumber="3" >
+		<datetime>Wed, 30 Nov 2011 22:42:20 +0000</datetime>
+		<state>inactive</state>
+	</beam>
+</info>

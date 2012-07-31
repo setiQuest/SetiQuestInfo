@@ -1,0 +1,16 @@
+<div CLASS=roundedCorner id="content_area">
+<h1>Pages#about</h1>
+</div>
+
+
+<SCRIPT>
+
+/* Apply curvy corners */
+/* For some reason, including this script above in the HEAD section does not work. */
+ settings = {tl: { radius: 5 },tr: { radius: 5 },bl: { radius: 5 },br: { radius: 5 },antiAlias: true,autoPad: true,validTags: ["div"]}
+ var myBoxObject = new curvyCorners(settings, "roundedCorner");
+ myBoxObject.applyCornersToAll();
+
+</SCRIPT>
+
+

@@ -1,0 +1,74 @@
+<div id="wrapper">
+
+<div>
+  <div id="header_logo">
+    <a href="http://setiquest.org" target="_setiquest">
+     <%= image_tag("seti_logo.gif") %>
+    </a>
+  </div>
+  <div id="header_text_area">
+    <span id="header_text_large">
+      <center>setiQuest Info Service</center>
+    </span>
+    <span id="header_text_medium">
+      <i>
+        <center>Extra information to help the search for intelligent signals from Outer-Space!</center>
+      </i>
+    </span>
+  </div>
+</div>
+
+  <DIV id="main_area">
+
+<DIV id="left_area">
+  <DIV CLASS=roundedCorner id="menu_area">
+<ul>
+  <li><%= link_to "Observation Info", "/data/obsinfo" %></li>
+  <li><%= link_to "Kepler Field", "/data/keplerfield" %></li>
+  <li><%= link_to "Data Feeds", "/data/feedinfo" %></li>
+</ul>
+
+  </DIV>
+
+  <DIV CLASS=roundedCorner id="weather_area">
+<center>
+<%= @weather_content %>
+</center>
+  </DIV>
+
+  <DIV CLASS=roundedCorner id="webcam_area">
+    
+<center>
+ATA Webcams
+<br>
+<br>
+</center>
+<center>
+    <%= link_to image_tag('http://log.hcro.org/files/atacam/lab1cam-current.jpg', :width=>"160",:border=>"1"), "/data/cam1" %>
+</center>
+    <br>
+<center>
+    <%= link_to image_tag('http://log.hcro.org/files/atacam/maincam-current.jpg', :width=>"160",:border=>"1"), "/data/cam2" %>
+</center>
+  </DIV>
+
+</DIV>
+   
+
+  <DIV CLASS=roundedCorner id="content_area">
+
+<%= @page_content %>
+
+  </DIV>
+
+  <DIV CLASS=roundedCorner id="footer_area" >
+
+    <center>SETI Institute &bull; 189 Bernardo Ave., Suite 100 &bull; Mountain View, CA 94043<BR>Phone 650.961.6633 &bull; Fax 650-961-7099</center>
+    <br>
+    <center>Copyright &copy; 2012. SETI Institute. All rights reserved. Unless otherwise indicated, the documents and graphics stored on this Web server, setiquest.info, are copyrighted. Links to these documents are permitted and encouraged. No copies may be made without permission.</center>
+  
+  </DIV>
+  </DIV>
+
+</div>
+

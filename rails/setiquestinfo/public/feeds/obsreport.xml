@@ -1,0 +1,1870 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<obsreport>
+  <starttime>2012-04-10 06:00:08.0</starttime>
+  <endtime>2012-04-11 06:00:08.0</endtime>
+    <db name="exoplanetsLBand">
+      <totalnumactivities>73</totalnumactivities>
+      <totalsignals>68099</totalsignals>
+      <totalcandidates>3669</totalcandidates>
+      <candrescounts>
+        <acttype name="target">
+          <signals>53866</signals>
+          <cand>1099</cand>
+          <confirmed>519</confirmed>
+        </acttype>
+        <acttype name="target1-on">
+          <signals>13326</signals>
+          <cand>496</cand>
+          <confirmed>0</confirmed>
+        </acttype>
+      </candrescounts>
+      <candsigclassreasons>
+        <reason count="519">Confrm</reason>
+        <reason count="494">NoSignl</reason>
+        <reason count="581">PsPwrT</reason>
+        <reason count="1">RctRFI</reason>
+        <reason count="551">SnMulBm</reason>
+        <reason count="911">SNoSigl</reason>
+        <reason count="1199">SSawSig</reason>
+        <reason count="31">ZeroDft</reason>
+      </candsigclassreasons>
+      <sigclassreasons>
+        <reason count="1950">2MnyCnd</reason>
+        <reason count="86">Dft2Hi</reason>
+        <reason count="14890">PsPwrT</reason>
+        <reason count="51035">RctRFI</reason>
+        <reason count="6">SNtInCh</reason>
+        <reason count="132">ZeroDft</reason>
+      </sigclassreasons>
+      <totalnumactivitiesbytype>
+        <type name="NULL">1</type>
+        <type name="bfautoatten">1</type>
+        <type name="bfinit">1</type>
+        <type name="bfreset">1</type>
+        <type name="cal">1</type>
+        <type name="prepants">1</type>
+        <type name="target">1</type>
+        <type name="target1-on">1</type>
+      </totalnumactivitiesbytype>
+      <sigcountsbyactivity>
+        <activity id="3922">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1150</totsig>
+          <totcand>44</totcand>
+          <totconf>29</totconf>
+        </activity>
+        <activity id="3923">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>524</totsig>
+          <totcand>49</totcand>
+          <totconf>32</totconf>
+        </activity>
+        <activity id="3924">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1451</totsig>
+          <totcand>29</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3925">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>432</totsig>
+          <totcand>32</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3926">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>213</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3927">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>306</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3928">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>284</totsig>
+          <totcand>15</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="3929">
+          <type>target1-on</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>258</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3930">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>462</totsig>
+          <totcand>19</totcand>
+          <totconf>7</totconf>
+        </activity>
+        <activity id="3931">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>183</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3932">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>452</totsig>
+          <totcand>7</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3933">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>576</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3934">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>555</totsig>
+          <totcand>22</totcand>
+          <totconf>5</totconf>
+        </activity>
+        <activity id="3935">
+          <type>target1-on</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>571</totsig>
+          <totcand>5</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3950">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1372</totsig>
+          <totcand>27</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3951">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>1365</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3952">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1111</totsig>
+          <totcand>18</totcand>
+          <totconf>14</totconf>
+        </activity>
+        <activity id="3953">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>410</totsig>
+          <totcand>13</totcand>
+          <totconf>7</totconf>
+        </activity>
+        <activity id="3954">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1071</totsig>
+          <totcand>14</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3955">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>370</totsig>
+          <totcand>7</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3956">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>173</totsig>
+          <totcand>3</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="3957">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>320</totsig>
+          <totcand>1</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="3958">
+          <type>target1-on</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>192</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3959">
+          <type>target1-on</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>303</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3960">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>294</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3961">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>859</totsig>
+          <totcand>10</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="3962">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>1443</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3963">
+          <type>target1-on</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>657</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3964">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2696</totsig>
+          <totcand>148</totcand>
+          <totconf>96</totconf>
+        </activity>
+        <activity id="3965">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>426</totsig>
+          <totcand>3</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="3966">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1514</totsig>
+          <totcand>96</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3967">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>531</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3968">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>212</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3969">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>295</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3970">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>216</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3971">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>2060</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3972">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>1842</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3973">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1012</totsig>
+          <totcand>23</totcand>
+          <totconf>14</totconf>
+        </activity>
+        <activity id="3974">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>363</totsig>
+          <totcand>23</totcand>
+          <totconf>18</totconf>
+        </activity>
+        <activity id="3975">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>905</totsig>
+          <totcand>14</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3976">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>457</totsig>
+          <totcand>18</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3977">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>177</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3978">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>300</totsig>
+          <totcand>2</totcand>
+          <totconf>2</totconf>
+        </activity>
+        <activity id="3979">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>276</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3980">
+          <type>target1-on</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>667</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3981">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1920</totsig>
+          <totcand>5</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3982">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>1324</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3983">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>400</totsig>
+          <totcand>63</totcand>
+          <totconf>53</totconf>
+        </activity>
+        <activity id="3984">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>352</totsig>
+          <totcand>1</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="3985">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>238</totsig>
+          <totcand>53</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3986">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>328</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3987">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>143</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3988">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>283</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3989">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>316</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="3990">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>4079</totsig>
+          <totcand>307</totcand>
+          <totconf>222</totconf>
+        </activity>
+        <activity id="3991">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>23574</totsig>
+          <totcand>287</totcand>
+          <totconf>14</totconf>
+        </activity>
+        <activity id="3992">
+          <type>target1-on</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>2929</totsig>
+          <totcand>213</totcand>
+          <totconf>0</totconf>
+        </activity>
+      </sigcountsbyactivity>
+    </db>
+    <db name="keplerLBand">
+      <totalnumactivities>167</totalnumactivities>
+      <totalsignals>256762</totalsignals>
+      <totalcandidates>1707</totalcandidates>
+      <candrescounts>
+        <acttype name="target">
+          <signals>193759</signals>
+          <cand>516</cand>
+          <confirmed>208</confirmed>
+        </acttype>
+        <acttype name="target1-on">
+          <signals>62685</signals>
+          <cand>208</cand>
+          <confirmed>1</confirmed>
+        </acttype>
+        <acttype name="target1off">
+          <signals>318</signals>
+          <cand>1</cand>
+          <confirmed>1</confirmed>
+        </acttype>
+      </candrescounts>
+      <candsigclassreasons>
+        <reason count="208">Confrm</reason>
+        <reason count="203">NoSignl</reason>
+        <reason count="208">PsPwrT</reason>
+        <reason count="2">RConfrm</reason>
+        <reason count="2">RctRFI</reason>
+        <reason count="286">SnMulBm</reason>
+        <reason count="440">SNoSigl</reason>
+        <reason count="549">SSawSig</reason>
+        <reason count="24">ZeroDft</reason>
+      </candsigclassreasons>
+      <sigclassreasons>
+        <reason count="49">2MnyCnd</reason>
+        <reason count="11">Dft2Hi</reason>
+        <reason count="63512">PsPwrT</reason>
+        <reason count="193127">RctRFI</reason>
+        <reason count="16">SNtInCh</reason>
+        <reason count="47">ZeroDft</reason>
+      </sigclassreasons>
+      <totalnumactivitiesbytype>
+        <type name="freeants">1</type>
+        <type name="target">1</type>
+        <type name="target1-on">1</type>
+        <type name="target1off">1</type>
+        <type name="target2-on">1</type>
+      </totalnumactivitiesbytype>
+      <sigcountsbyactivity>
+        <activity id="9086">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1241</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9087">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>1526</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9088">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>949</totsig>
+          <totcand>2</totcand>
+          <totconf>2</totconf>
+        </activity>
+        <activity id="9089">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>404</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9090">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1174</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9091">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>152</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9092">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>356</totsig>
+          <totcand>1</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="9093">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>185</totsig>
+          <totcand>2</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="9094">
+          <type>target1-on</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>339</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9095">
+          <type>target1-on</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>210</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9096">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>944</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9097">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>2187</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9098">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1051</totsig>
+          <totcand>4</totcand>
+          <totconf>3</totconf>
+        </activity>
+        <activity id="9099">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>419</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9100">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2547</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9101">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>143</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9102">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>294</totsig>
+          <totcand>5</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9103">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>213</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9104">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1832</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9105">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>1825</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9106">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>3158</totsig>
+          <totcand>12</totcand>
+          <totconf>11</totconf>
+        </activity>
+        <activity id="9107">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>467</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9108">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>12161</totsig>
+          <totcand>11</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9109">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>140</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9110">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>222</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9111">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>187</totsig>
+          <totcand>4</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="9112">
+          <type>target1-on</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>183</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9113">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1165</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9114">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>4239</totsig>
+          <totcand>1</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="9115">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>3078</totsig>
+          <totcand>10</totcand>
+          <totconf>7</totconf>
+        </activity>
+        <activity id="9116">
+          <type>target1-on</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>3612</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9117">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>3723</totsig>
+          <totcand>7</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9118">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>755</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9119">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>149</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9120">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.015199989</maxmhz>
+          <totsig>228</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9121">
+          <type>target</type>
+          <minmhz>1690.834133322</minmhz>
+          <maxmhz>1709.675733322</maxmhz>
+          <totsig>1008</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9122">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>969</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9123">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>4080</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9124">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2141</totsig>
+          <totcand>4</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="9125">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>298</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9126">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2319</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9127">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>142</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9128">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>204</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9129">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>184</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9130">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1052</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9131">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>2696</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9132">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>3086</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9133">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>381</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9134">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>148</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9135">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>754</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9136">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>296</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9137">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1111</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9138">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>3857</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9139">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>3468</totsig>
+          <totcand>7</totcand>
+          <totconf>7</totconf>
+        </activity>
+        <activity id="9140">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>308</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9141">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>4208</totsig>
+          <totcand>7</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9142">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>135</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9143">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>203</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9144">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1709.675733322</maxmhz>
+          <totsig>304</totsig>
+          <totcand>55</totcand>
+          <totconf>48</totconf>
+        </activity>
+        <activity id="9145">
+          <type>target1-on</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1709.675733322</maxmhz>
+          <totsig>246</totsig>
+          <totcand>48</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9146">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1537</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9147">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>3857</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9148">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>4034</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9149">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>321</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9150">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>139</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9151">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>420</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9152">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>197</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9153">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1347</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9154">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>15611</totsig>
+          <totcand>8</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9155">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2789</totsig>
+          <totcand>3</totcand>
+          <totconf>3</totconf>
+        </activity>
+        <activity id="9156">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>376</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9157">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2464</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9158">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>155</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9159">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>456</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9160">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>268</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9161">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1054</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9162">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>463</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9163">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2652</totsig>
+          <totcand>7</totcand>
+          <totconf>5</totconf>
+        </activity>
+        <activity id="9164">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>389</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9165">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>6348</totsig>
+          <totcand>5</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9166">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>133</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9167">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>213</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9168">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>215</totsig>
+          <totcand>3</totcand>
+          <totconf>2</totconf>
+        </activity>
+        <activity id="9169">
+          <type>target1-on</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>260</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9170">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1629</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9171">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>17729</totsig>
+          <totcand>3</totcand>
+          <totconf>2</totconf>
+        </activity>
+        <activity id="9172">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2434</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9173">
+          <type>target1-on</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>7006</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9174">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>310</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9175">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>145</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9176">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>299</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9177">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>400</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9178">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>520</totsig>
+          <totcand>2</totcand>
+          <totconf>2</totconf>
+        </activity>
+        <activity id="9179">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>3669</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9180">
+          <type>target1-on</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>496</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9181">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1132</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9182">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>348</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9183">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>166</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9184">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>314</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9185">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>245</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9186">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1455</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9187">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>3518</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9188">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>397</totsig>
+          <totcand>3</totcand>
+          <totconf>3</totconf>
+        </activity>
+        <activity id="9189">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>368</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9190">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>272</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9191">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>157</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9192">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>820</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9193">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>365</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9194">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>468</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9195">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>9908</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9196">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>550</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9197">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>461</totsig>
+          <totcand>4</totcand>
+          <totconf>4</totconf>
+        </activity>
+        <activity id="9198">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>177</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9199">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>385</totsig>
+          <totcand>4</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9200">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>261</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9201">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>325</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9202">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1618</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9203">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>4917</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9204">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>987</totsig>
+          <totcand>3</totcand>
+          <totconf>2</totconf>
+        </activity>
+        <activity id="9205">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>446</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9206">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>906</totsig>
+          <totcand>2</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9207">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>292</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9208">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>405</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9209">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>366</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9210">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>927</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9211">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>6120</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9212">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2723</totsig>
+          <totcand>13</totcand>
+          <totconf>5</totconf>
+        </activity>
+        <activity id="9213">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>488</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9214">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2927</totsig>
+          <totcand>5</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9215">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>196</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9216">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>444</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9217">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>503</totsig>
+          <totcand>28</totcand>
+          <totconf>8</totconf>
+        </activity>
+        <activity id="9218">
+          <type>target1-on</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>421</totsig>
+          <totcand>8</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9219">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>3382</totsig>
+          <totcand>67</totcand>
+          <totconf>18</totconf>
+        </activity>
+        <activity id="9220">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>556</totsig>
+          <totcand>2</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="9221">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2729</totsig>
+          <totcand>18</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9222">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>503</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9223">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>256</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9224">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>538</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9225">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>328</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9226">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>1672</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9227">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>9458</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9228">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2817</totsig>
+          <totcand>17</totcand>
+          <totconf>5</totconf>
+        </activity>
+        <activity id="9229">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>516</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9230">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>2554</totsig>
+          <totcand>5</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9231">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>320</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9232">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>483</totsig>
+          <totcand>6</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="9233">
+          <type>target</type>
+          <minmhz>1691.653333322</minmhz>
+          <maxmhz>1710.494933322</maxmhz>
+          <totsig>563</totsig>
+          <totcand>7</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9234">
+          <type>target1-on</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>628</totsig>
+          <totcand>1</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9235">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>2322</totsig>
+          <totcand>19</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9236">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>400</totsig>
+          <totcand>0</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9237">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1292</totsig>
+          <totcand>9</totcand>
+          <totconf>5</totconf>
+        </activity>
+        <activity id="9238">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1211</totsig>
+          <totcand>5</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9239">
+          <type>target</type>
+          <minmhz>1512.6096</minmhz>
+          <maxmhz>1531.4512</maxmhz>
+          <totsig>2330</totsig>
+          <totcand>4</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9240">
+          <type>target</type>
+          <minmhz>1579.614600229</minmhz>
+          <maxmhz>1600.913800229</maxmhz>
+          <totsig>1687</totsig>
+          <totcand>3</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9241">
+          <type>target</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>1274</totsig>
+          <totcand>37</totcand>
+          <totconf>17</totconf>
+        </activity>
+        <activity id="9242">
+          <type>target</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>1033</totsig>
+          <totcand>6</totcand>
+          <totconf>4</totconf>
+        </activity>
+        <activity id="9243">
+          <type>target1-on</type>
+          <minmhz>1604.81919999</minmhz>
+          <maxmhz>1623.66079999</maxmhz>
+          <totsig>672</totsig>
+          <totcand>17</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9244">
+          <type>target1-on</type>
+          <minmhz>1624.479733323</minmhz>
+          <maxmhz>1643.321333323</maxmhz>
+          <totsig>883</totsig>
+          <totcand>4</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9245">
+          <type>target</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>386</totsig>
+          <totcand>40</totcand>
+          <totconf>18</totconf>
+        </activity>
+        <activity id="9246">
+          <type>target</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>1780</totsig>
+          <totcand>83</totcand>
+          <totconf>20</totconf>
+        </activity>
+        <activity id="9247">
+          <type>target1-on</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>365</totsig>
+          <totcand>18</totcand>
+          <totconf>1</totconf>
+        </activity>
+        <activity id="9248">
+          <type>target1-on</type>
+          <minmhz>1663.800799989</minmhz>
+          <maxmhz>1690.834399989</maxmhz>
+          <totsig>933</totsig>
+          <totcand>20</totcand>
+          <totconf>0</totconf>
+        </activity>
+        <activity id="9249">
+          <type>target1off</type>
+          <minmhz>1644.140266656</minmhz>
+          <maxmhz>1662.981866656</maxmhz>
+          <totsig>318</totsig>
+          <totcand>1</totcand>
+          <totconf>1</totconf>
+        </activity>
+      </sigcountsbyactivity>
+    </db>
+</obsreport>

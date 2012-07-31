@@ -1,0 +1,48 @@
+<rss version="2.0"
+  xmlns:setiquestinfo="http://setiquest.info/rss">        
+  <channel>
+        <title>Allen Telescope Observation Information</title>
+        <description>The Allen Telescope Array will publish this RSS feed to inform the public where it is looking.</description>
+        <link>http://setiquest.org</link>
+        <item>
+                <title>ATA Observation Status</title>
+                <description>What the ATA is doing, where it is looking.</description>
+                <link>http://setiquest.info/ata</link>
+                <guid>http://setiquest.info/ata</guid>
+                <setiquestinfo:type>obsinfo</setiquestinfo:type>
+                <pubDate>Tue, 29 Nov 2011 18:51:30 +0000</pubDate>
+                <setiquestinfo:activityid>4904</setiquestinfo:activityid>
+                <setiquestinfo:arraystate>Idle</setiquestinfo:arraystate>
+                <setiquestinfo:primarybeamra>4.416666507720947</setiquestinfo:primarybeamra>
+                <setiquestinfo:primarybeamdec>39.46055603027344</setiquestinfo:primarybeamdec>
+        </item>
+        <item>
+                <title>ATA Beam Status</title>
+                <description>What one Beam of the ATA is doing, where it is looking.</description>
+                <link>http://setiquest.info/ata</link>
+                <guid>http://setiquest.info/ata_beam1</guid>
+                <pubDate>Tue, 29 Nov 2011 18:51:30 +0000</pubDate>
+                <setiquestinfo:type>beaminfo</setiquestinfo:type>
+                <setiquestinfo:beamstate>inactive</setiquestinfo:beamstate>
+        </item>
+        <item>
+                <title>ATA Beam Status</title>
+                <description>What one Beam of the ATA is doing, where it is looking.</description>
+                <link>http://setiquest.info/ata</link>
+                <guid>http://setiquest.info/ata_beam2</guid>
+                <pubDate>Tue, 29 Nov 2011 18:51:30 +0000</pubDate>
+                <setiquestinfo:type>beaminfo</setiquestinfo:type>
+                <setiquestinfo:beamstate>inactive</setiquestinfo:beamstate>
+        </item>
+        <item>
+                <title>ATA Beam Status</title>
+                <description>What one Beam of the ATA is doing, where it is looking.</description>
+                <link>http://setiquest.info/ata</link>
+                <guid>http://setiquest.info/ata_beam3</guid>
+                <pubDate>Tue, 29 Nov 2011 18:51:30 +0000</pubDate>
+                <setiquestinfo:type>beaminfo</setiquestinfo:type>
+                <setiquestinfo:beamstate>inactive</setiquestinfo:beamstate>
+        </item>
+        </channel>
+</rss>
+

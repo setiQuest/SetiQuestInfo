@@ -1,0 +1,218 @@
+<h1>ATA Data Feeds and Files Documentation</h1>
+
+<table><tbody>
+
+<tr>
+  <td align="center" valign="middle"><img src="/images/sonata-server-lights.jpg" width="200" /><center><p style="font-size:8px;">Pretty lights from the SonATA computers</p></center> </td>
+  <td align="left" valign="top">
+  <p>There are several data feeds that originate from the Allen Telescope Array. These feeds allow real-time viewing of the state of observations. More will be added as we progress.</p><p>Currently there are the following data feeds that anyone can use to keep tabs on what SETI is doing at the ATA:</p>
+
+  <center>
+  <table>
+  <tr>
+  <td>
+  <ul style='width:300px;'>
+    <li>Real-time <a href="#obsstatus">observation status</a>. Details what the Allen Telescope Array is looking at.</li>
+    <li>The <a href="#sched">observation schedule</a> for several days in advance.</li>
+    <li>The web page <a href="obsinfo" target="_statuspage">/data/obsinfo</a> is a <i>human readable</i> form of the status and schedule XML feeds combined.</li>
+    <li>The Kepler Field rise and set times over the ATA. <a href="/feeds/kep365.xml">kep365.xml</a> or <a href="/feeds/kep365.csv">kep365.csv</a> for those who want to play around in Excel.
+  </ul>
+  </td>
+  </tr>
+  </table>
+  </center>
+
+  </td>
+</tr>
+</tbody></table>
+
+<a name="obsstatus"></a>
+<h1>Observation Data Status</h1>
+
+<p><b>Description:</b> Contains the current status of SonATA observations.</p>
+<p><b>URL:</b> <a href="/feeds/sonatastatus.xml" target="status">/feeds/sonatastatus.xml</a></p>
+<p><b>Update frequency:</b> Whenever the observation state changes. When observing, this is commonly from several times a minute to every several minutes.</p>
+
+<br>
+<p><i>Example of the Observation status when the system is IDLE:</i></p>
+<p>
+
+<pre>
+&lt;info&gt;
+  &lt;obs&gt;
+    &lt;datetime&gt;Mon, 19 Dec 2011 12:55:13 PST&lt;/datetime&gt;
+    &lt;activityid&gt;5124&lt;/activityid&gt;
+    &lt;state&gt;Idle&lt;/state&gt;
+    &lt;primarybeamra&gt;5.294722080230713&lt;/primarybeamra&gt;
+    &lt;primarybeamdec&gt;7.353333473205566&lt;/primarybeamdec&gt;
+  &lt;/obs&gt;
+  &lt;beam beamnumber="1"&gt;
+    &lt;state&gt;inactive&lt;/state&gt;
+  &lt;/beam&gt;
+  &lt;beam beamnumber="2"&gt;
+    &lt;state&gt;inactive&lt;/state&gt;
+  &lt;/beam&gt;
+  &lt;beam beamnumber="3"&gt;
+    &lt;state&gt;inactive&lt;/state&gt;
+  &lt;/beam&gt;
+&lt;/info&gt;
+</pre>
+
+</p>
+
+<p><i>Example of the Observation status when the system is observing:</i></p>
+<p>
+
+<pre>
+  TODO: I need to add an example here when the system is observing...
+  ...
+  ...
+
+</pre>
+
+</p>
+
+<p><b>Tag Explanation</b></p>
+
+<p>&lt;obs&gt; - This section contains the general state of the observation.</p>
+
+<ul>
+  <li>&lt;datetime&gt; - The date and time this observation XML file was generated.</li>
+  <li>&lt;activityid&gt; - The activity ID number of this observation. All observations are made up of one or more activities. The ID identifies this activity for refence to more detailed information about this observation. This activity ID is only used internally by SETI.</li>
+  <li>&lt;state&gt; - The state of the observation. There are many states:
+    <ul>
+      <li>IDLE - The system is doing nothing, no observing. The activity ID refers to the last active observation activity.</li>
+      <li>Observing - The system is in observation mode - but moving the antennas to a target.</li>
+      <li>Calibrating - Perforning a delay or phase calibration.
+      <li>Selecting Antennas - The system is determining which antennas to use for this observation.</li>
+      <li>Beamformer Autoatten - The beamformers are performing an auto attenuation procedure.</li>
+      <li>Beamformer Init - the beamformers are performing an initialization procedure.</li>
+      <li>Beamformer Reset - the beamformers are being reset.</li>
+      <li>Preparing Antennas - The system is setting parameters in the antennas. Such as focus, amplifier settings, etc.</li>
+electing Antennas
+    </ul>
+  </li>
+  <li>&lt;primarybeamra&gt; - The Right Ascension of where the center of the antennas are pointing.</li>
+  <li>&lt;primarybeamdec&gt; - The Declination of where the center of the antennas are pointing.</li>
+</ul>
+
+<p>&lt;beam&gt; - This section contains the state of each of the 3 beams.</p>
+<ul>
+  <li>beamnumber - this attribute is the identifying number of the beam. Valid are 1, 2 or 3.</li>
+  <li>&lt;state&gt; - The state of the beam. There are many states:
+    <ul>
+      <li>IDLE - The system is doing nothing, no observing. The activity ID refers to the last active observation activity.</li>
+      <li>Observing - The system is in observation mode - but moving the antennas to a target.</li>
+      <li>ON - The system is actively observing targets. one target for each beam.</li>
+      <li>ONx - The system is actively observing targets. &quot;x&quot; is a number from 1 through 5. This activity is observing a signal for a chance to see it for the xth time.</li>
+      <li>OFFx - The system is actively observing off target. &quot;x&quot; is a number from 1 through 5.</li>
+      <li>CAL - Performing a calibration.</li>
+      <li>PNT - The antennas are pointing.</li>
+      <li>ATT - The beamformers are performing an auto attenuation procedure.</li>
+      <li>RST - the beamformer is being reset.</li>
+      <li>INIT - The system is setting parameters in the antennas. Such as focus, amplifier settings, etc. This state can also signify the antenna selection is being performed or the beamformer is initializing.</li>
+electing Antennas
+    </ul>
+  </li>
+  <li>&lt;ra&gt; - The Right Ascension of this beam poining.</li>
+  <li>&lt;dec&gt; - The Declination of this beam pointing.</li>
+  <li>&lt;freqmhz&gt; - The frequency in megahertz. </li>
+  <li>&lt;targetname&gt; - The name of the object the beam is pointed at. This can be multiple names space or comma separated. </li>
+  <li>&lt;targetid&gt; - The ID of the target. This is an integer that is used internally in the SonATA database.</li>
+</ul>
+
+<hr>
+
+<a name="sched"></a>
+<h1>Schedule</h1>
+
+<p><b>Description:</b> Contains the SonATA observation schedule.</p>
+<p><b>URL:</b> <a href="/feeds/sonataschedule.xml" target="sched">/feeds/sonataschedule.xml</a></p>
+<p><b>Update frequency:</b> Every 5 minutes the schedule is resampled and published. The schedule changes frequenly, maybe as much as several times a day.</p>
+
+<br>
+<p><i>Example of the Schedule:</i></p>
+
+<p>
+<pre>
+
+&lt;schedule&gt;
+  &lt;datetime&gt;Wed, 21 Dec 2011 11:25:02 PST&lt;/datetime&gt;
+  &lt;status&gt;IDLE&lt;/status&gt;
+  &lt;obs current="no"&gt;
+    &lt;command&gt;exoplanets&lt;/command&gt;
+    &lt;start&gt;
+      &lt;year&gt;2011&lt;/year&gt;
+      &lt;month&gt;12&lt;/month&gt;
+      &lt;day&gt;21&lt;/day&gt;
+      &lt;hour&gt;18&lt;/hour&gt;
+      &lt;minute&gt;05&lt;/minute&gt;
+    &lt;/start&gt;
+    &lt;end&gt;
+      &lt;year&gt;2011&lt;/year&gt;
+      &lt;month&gt;12&lt;/month&gt;
+      &lt;day&gt;22&lt;/day&gt;
+      &lt;hour&gt;03&lt;/hour&gt;
+      &lt;minute&gt;55&lt;/minute&gt;
+    &lt;/end&gt;
+  &lt;obs&gt;
+  &lt;obs current="no"&gt;
+    &lt;command&gt;kepler&lt;/command&gt;
+    &lt;start&gt;
+      &lt;year&gt;2011&lt;/year&gt;
+      &lt;month&gt;12&lt;/month&gt;
+      &lt;day&gt;22&lt;/day&gt;
+      &lt;hour&gt;09&lt;/hour&gt;
+      &lt;minute&gt;05&lt;/minute&gt;
+    &lt;/start&gt;
+    &lt;end&gt;
+      &lt;year&gt;2011&lt;/year&gt;
+      &lt;month&gt;12&lt;/month&gt;
+      &lt;day&gt;22&lt;/day&gt;
+      &lt;hour&gt;14&lt;/hour&gt;
+      &lt;minute&gt;55&lt;/minute&gt;
+    &lt;/end&gt;
+  &lt;/obs&gt;
+  ...
+  ...
+&lt;/schedule&gt;
+</pre>
+
+<p><b>Tag Explanation</b></p>
+
+<p>&lt;schedule&gt; - This section contains the schedule.</p>
+
+<ul>
+  <li>&lt;datetime&gt; - The date and time this schedule XML file was generated.</li>
+  <li>&lt;status&gt; - The status of the schedule.
+    <ul>
+      <li>IDLE - SonATA is not currently scheduled to run at this time. </li>
+      <li>OBSERVING - SonATA is scheduled to be observing now. </li>
+    </ul>
+  </li>
+  <li>&lt;obs&gt; - A schdules observation start and end times
+    <ul>
+      <li>current - this attribute is &quot;yes&quot; if SonATA should be observing now. &quot;no&quot; if not.</li>
+      <li>&lt;command&gt; - The general intent of this scheduled observation. Example: <i>kepler</i> or <i>exoplanets</i>.</li>
+      <li>&lt;start&gt; - The start time and date of this observation period.
+        <ul>
+          <li>&lt;year&gt; - the year of the start time.</li>
+          <li>&lt;month&gt; - the month of the start time.</li>
+          <li>&lt;day&gt; - the day of the month of the start time.</li>
+          <li>&lt;hour&gt; - the hour of the start time.</li>
+          <li>&lt;minute&gt; - the minute of the start time.</li>
+        </ul>
+      </li>
+      <li>&lt;end&gt; - The end time and date of this observation period.
+        <ul>
+          <li>&lt;year&gt; - the year of the end time.</li>
+          <li>&lt;month&gt; - the month of the end time.</li>
+          <li>&lt;day&gt; - the day of the month of the end time.</li>
+          <li>&lt;hour&gt; - the hour of the end time.</li>
+          <li>&lt;minute&gt; - the minute of the end time.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  

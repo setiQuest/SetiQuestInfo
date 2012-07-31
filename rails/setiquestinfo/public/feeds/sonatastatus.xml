@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<info>
+	<obs>
+		<datetime>Thu, 12 Apr 2012 13:03:52 GMT</datetime>
+		<activityid>9570</activityid>
+		<state>Observing</state>
+		<primarybeamra>18.750680923461914</primarybeamra>
+		<primarybeamdec>42.40330123901367</primarybeamdec>
+	</obs>
+	<beam beamnumber="1" >
+		<state>ON1</state>
+		<targetid>161948</targetid>
+		<targetname>KOI 2578.01, KIC 6922203</targetname>
+		<ra>18.750680923461914</ra>
+		<dec>42.40330123901367</dec>
+		<freqmhz>1663.800048828125</freqmhz>
+	</beam>
+	<beam beamnumber="2" >
+		<state>ON1</state>
+		<targetid>161296</targetid>
+		<targetname>KOI 1362.01, KIC 6837146</targetname>
+		<ra>18.77368927001953</ra>
+		<dec>42.39039993286133</dec>
+		<freqmhz>1663.800048828125</freqmhz>
+	</beam>
+	<beam beamnumber="3" >
+		<state>ON1</state>
+		<targetid>161594</targetid>
+		<targetname>KOI 2102.01, KIC 7008211</targetname>
+		<ra>18.772939682006836</ra>
+		<dec>42.59640121459961</dec>
+		<freqmhz>1663.800048828125</freqmhz>
+	</beam>
+</info>

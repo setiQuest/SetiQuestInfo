@@ -1,0 +1,66 @@
+<rss version="2.0"
+  xmlns:setiquestinfo="http://setiquest.info/rss">
+        <channel>
+        <title>Allen Telescope Observation Information</title>
+        <description>The Allen Telescope Array will publish this RSS feed to inform the public where it is looking.</description>
+        <link>http://setiquest.org</link>
+        <item>
+                <title>ATA Observation Status</title>
+                <description>What the ATA is doing, where it is looking.</description>
+                <link>http://setiquest.info/ata</link>
+                <guid>http://setiquest.info/ata</guid>
+                <setiquestinfo:type>obsinfo</setiquestinfo:type>
+                <pubDate>Tue, 29 Nov 2011 18:51:10 +0000</pubDate>
+                <setiquestinfo:activityid>4744</setiquestinfo:activityid>
+                <setiquestinfo:arraystate>Observing</setiquestinfo:arraystate>
+                <setiquestinfo:primarybeamra>19.61992073059082</setiquestinfo:primarybeamra>
+                <setiquestinfo:primarybeamdec>28.499597549438477</setiquestinfo:primarybeamdec>
+        </item>
+        <item>
+                <title>ATA Beam Status</title>
+                <description>What one Beam of the ATA is doing, where it is looking.</description>
+                <link>http://setiquest.info/ata</link>
+                <guid>http://setiquest.info/ata_beam1</guid>
+                <pubDate>Tue, 29 Nov 2011 18:51:10 +0000</pubDate>
+                <setiquestinfo:type>beaminfo</setiquestinfo:type>
+                <setiquestinfo:beamnumber>1</setiquestinfo:beamnumber>
+                <setiquestinfo:beamstate>ON</setiquestinfo:beamstate>
+                <setiquestinfo:targetid>140644</setiquestinfo:targetid>
+                <setiquestinfo:targetname>HIP96507 HD185269 TYC2150-5013-1  HIP  96507</setiquestinfo:targetname>
+                <setiquestinfo:beamra>19.61992073059082</setiquestinfo:beamra>
+                <setiquestinfo:beamdec>28.499597549438477</setiquestinfo:beamdec>
+                <setiquestinfo:freqmhz>8677.349609375</setiquestinfo:freqmhz>
+        </item>
+        <item>
+                <title>ATA Beam Status</title>
+                <description>What one Beam of the ATA is doing, where it is looking.</description>
+                <link>http://setiquest.info/ata</link>
+                <guid>http://setiquest.info/ata_beam2</guid>
+                <pubDate>Tue, 29 Nov 2011 18:51:10 +0000</pubDate>
+                <setiquestinfo:type>beaminfo</setiquestinfo:type>
+                <setiquestinfo:beamnumber>2</setiquestinfo:beamnumber>
+                <setiquestinfo:beamstate>ON</setiquestinfo:beamstate>
+                <setiquestinfo:targetid>1473871</setiquestinfo:targetid>
+                <setiquestinfo:targetname>TYC2150-03321-1</setiquestinfo:targetname>
+                <setiquestinfo:beamra>19.6065731048584</setiquestinfo:beamra>
+                <setiquestinfo:beamdec>28.535253524780273</setiquestinfo:beamdec>
+                <setiquestinfo:freqmhz>8677.349609375</setiquestinfo:freqmhz>
+        </item>
+        <item>
+                <title>ATA Beam Status</title>
+                <description>What one Beam of the ATA is doing, where it is looking.</description>
+                <link>http://setiquest.info/ata</link>
+                <guid>http://setiquest.info/ata_beam3</guid>
+                <pubDate>Tue, 29 Nov 2011 18:51:10 +0000</pubDate>
+                <setiquestinfo:type>beaminfo</setiquestinfo:type>
+                <setiquestinfo:beamnumber>3</setiquestinfo:beamnumber>
+                <setiquestinfo:beamstate>ON</setiquestinfo:beamstate>
+                <setiquestinfo:targetid>140644</setiquestinfo:targetid>
+                <setiquestinfo:targetname>HIP96507 HD185269 TYC2150-5013-1  HIP  96507</setiquestinfo:targetname>
+                <setiquestinfo:beamra>19.605314254760742</setiquestinfo:beamra>
+                <setiquestinfo:beamdec>28.511281967163086</setiquestinfo:beamdec>
+                <setiquestinfo:freqmhz>8677.349609375</setiquestinfo:freqmhz>
+        </item>
+        </channel>
+</rss>
+
